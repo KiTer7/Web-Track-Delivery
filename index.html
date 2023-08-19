@@ -41,8 +41,8 @@
     <div id="home-header">
         <!--Header text-->
         <div class="text-content">
-            <h1 class="text-heading">Marvel blog</h1>
-            <div class="text-description">My world, my stories.</div>
+            <h1 class="text-heading">WEB TRACK DELIEVERY</h1>
+            <div class="text-description">A new way of thinking freight transportation</div>
             <!-- Header slide show -->
             <div class="slideshow">
                 <div class="slides">
@@ -82,7 +82,37 @@
                   // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
                   style: 'mapbox://styles/mapbox/streets-v12',
                   center: [147.34556,-42.88267],
-                  zoom: 13
+                  zoom: 6
+                });
+
+                // Define the start and end coordinates for the line
+                var startCoordinates = [147.33838,-42.88239];
+                var endCoordinates = [144.93162,-37.84377];
+
+                // Add a line layer to the map
+                map.on('load', function () {
+                    map.addLayer({
+                        'id': 'line',
+                        'type': 'line',
+                        'source': {
+                            'type': 'geojson',
+                            'data': {
+                                'type': 'Feature',
+                                'geometry': {
+                                    'type': 'LineString',
+                                    'coordinates': [startCoordinates, endCoordinates]
+                                }
+                            }
+                        },
+                        'layout': {
+                            'line-join': 'round',
+                            'line-cap': 'round'
+                        },
+                        'paint': {
+                            'line-color': '#FF5733',
+                            'line-width': 8
+                        }
+                    });
                 });
 
                 map.addControl(
