@@ -82,7 +82,7 @@
                   // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
                   style: 'mapbox://styles/mapbox/streets-v12',
                   center: [147.34556,-42.88267],
-                  zoom: 6
+                  zoom: 5
                 });
 
 
@@ -90,7 +90,7 @@
                 map.on('load', function () {
                     map.addSource('lines', {
                         type: 'geojson',
-                        data: 'lines.geojson'
+                        data: 'lines.geojson' // Replace with the actual path
                     });
 
                     map.addLayer({
