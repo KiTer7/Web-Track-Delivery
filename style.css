@@ -1,0 +1,313 @@
+/* Remove all initial paddding and margin */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* The font applies for whole website. */
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* images background display on the header of home and archive pages */
+.img-header {
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+
+body {
+    background-color: #000;
+}
+
+/*The navigation bar  */
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46px;
+    background-color: #232121;
+    z-index: 4;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+#logo {
+    position: relative;
+    margin: 5px 8px;
+    display: inline-block;
+    height: 40px;
+}
+
+#navigation_header {
+    position: relative;
+    width: 500px;
+    height: 46px;
+}
+
+/* */
+.navigation_list {
+    list-style-type: none;
+    display: flex;
+}
+
+.navigation_link_list {
+    color: #fff;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 32px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.active_navigation_link {
+    color: #8665a5;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 32px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.navigation_list li:hover a {
+    color: #000;
+    background-color: #ccc;
+}
+
+.btn:hover {
+    background-color: #666;
+    color: white;
+}
+
+/* style of header in home page */
+#home-header {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background-color: rgb(173, 56, 56);
+}
+
+#home-header .text-content {
+    position: absolute;
+    top: 12%;
+    left: 16%;
+    color: #fff;
+}
+
+#home-header .text-heading {
+    font-size: 300%;
+}
+
+#home-header .text-description {
+    font-style: italic;
+}
+
+/* Slide show */
+#home-header .slideshow {
+    position: relative;
+    margin-top: 40px;
+    left: -30px;
+}
+
+#home-header .slides {
+    display: none;
+}
+
+#home-header .slides>img {
+    width: 40%;
+    vertical-align: middle;
+}
+
+/* Last, next buttons */
+.last,
+.next {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -22px;
+    width: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 1s ease;
+    border-radius: 5px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+.next {
+    left: 39%;
+}
+
+.last {
+    left: -30px;
+}
+
+.last:hover,
+.next:hover {
+    background-color: rgba(137, 129, 129, 0.8);
+}
+
+/* Main content */
+#content {
+    padding-bottom: 0px;
+    height: 100%;
+}
+
+#content .content-section {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 32px 20px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+}
+
+#content .content-section .post-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+#content .content-section .post-date {
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+#content .content-section .post-tag {
+    text-align: center;
+    opacity: 0.4;
+}
+
+#content .content-section .post-content {
+    font-size: 15px;
+    margin-top: 5px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .heroes-list {
+    margin-top: 10px;
+    list-style-type: none;
+
+}
+
+#content .heroes-item {
+    float: left;
+    width: calc(100% / 3);
+    padding: 0 8px;
+}
+
+#content .heroes-name {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#content .heroes-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* to control the flow next to floated "heroes-item" class */
+#content .clear {
+    clear: both;
+}
+
+#toTopButton {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 14px;
+    outline: none;
+    background-color: #555;
+    color: #ffff;
+    border-radius: 11px;
+    font-size: 16px;
+    display: none;
+}
+
+#toTopButton:hover {
+    background-color: #555;
+    /* Add a dark-grey background on hover */
+}
+
+ /* POST PAGE FORM */
+.post-page {
+    background-color: rgb(0, 0, 0) ;
+
+}
+#post-page-header  {
+    width: auto;
+    height: auto;
+
+
+}
+#post-page-header img {
+    margin: auto;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+#post-page-title {
+    color: #fff;
+    border: 1px solid black;
+    margin-top: 2em;
+    margin-bottom:2em ;
+    text-align: center;
+}
+#post-page-title p {
+    font-size: 4em;
+
+}
+
+.post-page-content {
+    background-color: rgba(0, 0, 0, 0.805);
+    font-size: 1.2rem;
+    width: 60%;
+    border: 1px solid #ccc;
+    height: 100%;
+    margin: auto;
+    padding: 1em;
+    color: #ccc;
+
+}
+
+.post-page-content textarea {
+    margin-top: 1em;
+    width: 100%;
+    height: 500px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(238, 235, 235);
+}
+
+.post-page-content input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 12px 0 1em 0 ;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 0.8em;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(238, 235, 235);
+}
+
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
