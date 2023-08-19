@@ -85,32 +85,21 @@
                   zoom: 6
                 });
 
-                // Define the start and end coordinates for the line
-                var startCoordinates = [147.33838,-42.88239];
-                var endCoordinates = [144.93162,-37.84377];
 
                 // Add a line layer to the map
                 map.on('load', function () {
+                    map.addSource('lines', {
+                        type: 'geojson',
+                        data: 'lines.geojson'
+                    });
+
                     map.addLayer({
-                        'id': 'line',
-                        'type': 'line',
-                        'source': {
-                            'type': 'geojson',
-                            'data': {
-                                'type': 'Feature',
-                                'geometry': {
-                                    'type': 'LineString',
-                                    'coordinates': [startCoordinates, endCoordinates]
-                                }
-                            }
-                        },
-                        'layout': {
-                            'line-join': 'round',
-                            'line-cap': 'round'
-                        },
-                        'paint': {
+                        id: 'lines',
+                        type: 'line',
+                        source: 'lines',
+                        paint: {
                             'line-color': '#FF5733',
-                            'line-width': 8
+                            'line-width': 4
                         }
                     });
                 });
